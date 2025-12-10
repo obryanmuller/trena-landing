@@ -10,6 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // --- CORES DA TRENA (Adicionadas aqui) ---
+        trena: {
+          yellow: '#FFC800', // Amarelo da Logo
+          dark: '#2D2D2D',   // Cinza Escuro da Logo
+          gray: '#F3F4F6',   // Cinza Claro para fundos
+        },
+        // ----------------------------------------
+        
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
