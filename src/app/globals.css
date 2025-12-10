@@ -1,34 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  /* Cores da Trena */
   --color-trena-yellow: #FFC800;
-  --color-trena-dark: #2D2D2D;
+  --color-trena-dark: #1A1A1A;
   --color-trena-gray: #F3F4F6;
   
-  /* Fontes */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @layer utilities {
-  .animate-fade-up {
-    animation: fadeUp 0.8s ease-out forwards;
+  /* Fundo "Papel Milimetrado" Técnico */
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+
+  /* Sombra Dura (Estilo Industrial) */
+  .shadow-hard {
+    box-shadow: 4px 4px 0px 0px #1A1A1A;
+  }
+  
+  .shadow-hard-sm {
+    box-shadow: 2px 2px 0px 0px #1A1A1A;
+  }
+
+  .shadow-hard-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px #1A1A1A;
+  }
+
+  /* Animação */
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
   }
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 :root {
-  background-color: #ffffff;
-  color: #2D2D2D;
+  background-color: #fff;
+  color: #1A1A1A;
 }
 
 body {
